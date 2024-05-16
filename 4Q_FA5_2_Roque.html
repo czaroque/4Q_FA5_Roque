@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4Q_FA5_2_Roque</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Contacts List</legend>
+        <label for="name">Contact Name</label> <br>
+        <input type="text" id="name" name="name">
+        <input type="button" onclick="addCont()" value="Add">
+        <input type="button" onclick="remCont()" value="Remove">
+
+        <p id="pkita"></p>
+    </fieldset>
+    <script>
+        var contactList = [];
+
+        function addCont(){
+            var nm = document.getElementById("name").value;
+            if (contactList.length < 7){
+                contactList.push(nm);
+            } else {
+                contactList.shift();
+                contactList.push(nm);
+            }
+            updCont()
+        }
+        function remCont(){
+            if (contactList.length > 0){
+                contactList.pop();
+            }
+            updCont();
+        }
+        function updCont(){
+            document.getElementById("pkita").innerText = contactList.join(" ");
+        }
+    </script>
+</body>
+</html>

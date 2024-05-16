@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4Q_FA5_1_Roque</title>
+</head>
+<body>
+    <script>
+        var number = prompt("Kindly input a number: ");
+        while (isNaN(number)){
+            alert("Please enter a NUMBER ;(");
+            var number = prompt("Kindly input a number: ");
+        }
+        
+        var numinp = parseInt(number);
+        document.write("Number inputted: " + numinp + "<br>");
+
+        if(numinp % 2 == 0){
+            for (var x = numinp; x >= 1; x--){
+                var r = '';
+                for (var y = 1; y <= numinp-x+1; y++){
+                    r += '';
+                }
+                for (var z = x; z >=1; z--){
+                    r += x + '';
+                }
+                document.write(r + "<br>");
+            }
+        }
+        else {
+            for (var x = numinp; x >= 1; x--){
+                var r = '';
+                for (var y = 1; y <= numinp; y++)
+                {
+                    r += x + '';
+                }
+                document.write(r + "<br>");
+            }
+        }
+    </script>
+</body>
+</html>
